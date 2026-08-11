@@ -35,7 +35,7 @@ via a `SceneViewExtension`. Project materials and content are not modified.
 
 ## Requirements
 
-- **Unreal Engine 5.4, 5.5, or 5.6.** Shader Model 5+.
+- **Unreal Engine 5.4 – 5.8.** Shader Model 5+.
 - **Platforms: Windows 64-bit** — precompiled binaries included; developed and
   runtime-tested on Windows/DirectX. Mobile and VR are not supported.
 - Works in Blueprint-only or C++ projects (full source included).
