@@ -65,10 +65,13 @@ via a `SceneViewExtension`. Project materials and content are not modified.
      `frontier46`, `vivid60`, `painter64`, `wilds64`, `desktop64`, `cube64`)
      loads a palette at runtime. Run `r.Rain64.PalettePreset` with no argument
      to list them.
-4. Presets and palette presets are runtime-only. To persist a configuration,
-   set it in **Project Settings → Plugins → Rain64 Retro Shader** — every
-   property mirrors a console variable and saves to the project's
-   `DefaultGame.ini`.
+   - Alternatively, in Project Settings set **Color Mode** to Palette and choose
+     an entry from **Load Built-In Palette** — it fills the Palette list with the
+     preset's colors (editable afterwards) and saves with the project.
+4. `r.Rain64.Preset` and the `r.Rain64.PalettePreset` console command are
+   runtime-only. To persist a configuration, set it in **Project Settings →
+   Plugins → Rain64 Retro Shader** — every property mirrors a console variable
+   and saves to the project's `DefaultGame.ini`.
 
 ## How it works
 
@@ -130,7 +133,8 @@ page mirrors them. Defaults below are the plugin's out-of-the-box values.
 | `r.Rain64.Mask` | 0.0 | Aperture-grille RGB mask strength. |
 
 The indexed **Palette** (used when `ColorMode` = 1) holds up to 64 colors.
-Author your own in Project Settings, or load one of the ten built-ins with
+Author your own in Project Settings, load a built-in there via **Load Built-In
+Palette** (persists with the project), or load one at runtime with
 `r.Rain64.PalettePreset` — sets larger than 64 entries reduce by even stride on
 apply. While the palette is empty, palette mode falls back to per-channel
 quantization.
